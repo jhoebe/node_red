@@ -15,6 +15,7 @@ add yourself to docker group  for when you get fed up with all the sudo below...
 	sudo service docker restart
 
 install Node-RED from gist
+
 	sudo docker build -rm -t dcj/node-red http://gist.github.com/raw/9435867/Dockerfile
 or	sudo docker build -rm -t dcj/node-red git://gist.github.com/9435867.git
 
