@@ -19,16 +19,21 @@ install Node-RED from gist
 or	sudo docker build -rm -t dcj/node-red git://gist.github.com/9435867.git
 
 (or scp Dockerfile and build)
+
 	sudo docker build -rm -t dcj/node-red - < Dockerfile
 
 run (as daemon)
+
 	sudo docker run -d -p 1880:1880 dcj/node-red
 
 command line
+
 	sudo docker run -i -t dcj/node-red /bin/bash
 
 show running containers
+
 	sudo docker ps -a
 
 show all images (so you can tidy up)
+
 	sudo docker images
