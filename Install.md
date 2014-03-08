@@ -1,12 +1,15 @@
 install docker
+
 	sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring
 	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
 	sudo reboot
 
 then
+
 	sudo apt-get install lxc-docker
 
 add yourself to docker group  for when you get fed up with all the sudo below...
+
 	sudo groupadd docker
 	sudo gpasswd -a ${USER} docker
 	sudo service docker restart
