@@ -16,21 +16,21 @@ add yourself to docker group  for when you get fed up with all the sudo below...
 
 install Node-RED from gist
 
-    sudo docker build -rm -t dcj/node-red http://gist.github.com/raw/9435867/Dockerfile
+    sudo docker build -rm -t davecj/node-red http://gist.github.com/raw/9435867/Dockerfile
     or
-    sudo docker build -rm -t dcj/node-red git://gist.github.com/9435867.git
+    sudo docker build -rm -t davecj/node-red git://gist.github.com/9435867.git
 
 (or scp Dockerfile and build)
 
-	sudo docker build -rm -t dcj/node-red - < Dockerfile
+	sudo docker build -rm -t davecj/node-red - < Dockerfile
 
 run (as daemon)
 
-	sudo docker run -d -p 1880:1880 dcj/node-red
+	sudo docker run -d -p 1880:1880 davecj/node-red
 
 command line
 
-	sudo docker run -i -t dcj/node-red /bin/bash
+	sudo docker run -i -t davecj/node-red /bin/bash
 
 show running containers
 
