@@ -20,7 +20,7 @@ MAINTAINER ceejay
 #RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
  
 # download latest stable node-red
-RUN sudo npm install -g node-red
+RUN npm install -g node-red
  
 # remove some nodes
 
