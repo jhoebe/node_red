@@ -36,4 +36,4 @@ EXPOSE 1880
  
 # Set the default command to execute
 # when creating a new container
-CMD /usr/bin/node-red
+CMD /usr/local/bin/node-red
