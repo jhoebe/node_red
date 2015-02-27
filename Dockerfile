@@ -1,7 +1,7 @@
 # Dockerfile for Node-RED - pulls latest master code from git
 # Use the node.js v0.10.36 engine
-#FROM node:0.10.36
-FROM nano/node.js
+FROM node:0.10.36
+#FROM nano/node.js
 MAINTAINER ceejay
  
 # download latest stable node-red
