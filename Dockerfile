@@ -1,5 +1,5 @@
 # Dockerfile for Node-RED - pulls latest master code from git
-FROM ubuntu:14.04
+FROM node:0.10.36
 
 MAINTAINER ceejay
  
@@ -14,10 +14,10 @@ MAINTAINER ceejay
 # install dependencies
 #RUN apt-get install python-software-properties python g++ make software-properties-common wget curl unzip git -y
 #RUN apt-get install build-essential python-dev wget curl unzip git -y 
-RUN apt-get install wget curl unzip git -y 
+#RUN apt-get install wget curl unzip git -y 
  
 # add node.js repo
-RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
+#RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
  
 # download latest stable node-red
 RUN sudo npm install -g node-red
@@ -26,7 +26,7 @@ RUN sudo npm install -g node-red
 
  
 # install node-red node_modules
-RUN cd /opt/node-red && npm install --production && npm install eyes js2xmlparser fs.notify
+#RUN cd /opt/node-red && npm install --production && npm install eyes js2xmlparser fs.notify
  
 # add extra nodes project so we have the lot just in case.
 #RUN cd /opt/node-red/nodes && git clone https://github.com/node-red/node-red-nodes.git
