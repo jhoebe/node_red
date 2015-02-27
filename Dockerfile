@@ -14,6 +14,7 @@ MAINTAINER ceejay
 # install dependencies
 #RUN apt-get install python-software-properties python g++ make software-properties-common wget curl unzip git -y
 #RUN apt-get install build-essential python-dev wget curl unzip git -y 
+RUN apt-get install wget curl unzip git -y 
  
 # add node.js repo
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
