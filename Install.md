@@ -23,6 +23,8 @@ install Node-RED from the gist above
 
     sudo docker build -rm -t davecj/node-red - < Dockerfile
 
+**Note:** there will be errors during the npm install - but they should be warnings about gyp failing to build icu and serialport - but they will fail back to pr-compiled versions ok. So all should be ok.
+
 run (as daemon)
 
     sudo docker run -d -p 1880:1880 --name mynodered davecj/node-red
