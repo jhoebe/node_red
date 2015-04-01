@@ -1,17 +1,17 @@
 Install docker as per latest instructions at
 
-	 https://docs.docker.com/installation/
+    https://docs.docker.com/installation/
 
 e.g. for Ubuntu 14.04
 
-        sudo apt-get update
-        sudo apt-get install linux-image-generic-lts-trusty wget
-	wget -qO- https://get.docker.com/ | sh
+    sudo apt-get update
+    sudo apt-get install linux-image-generic-lts-trusty wget
+    wget -qO- https://get.docker.com/ | sh
 
 add yourself to docker group  for when you get fed up with all the sudo below...
 
-	sudo usermod -aG docker $USER
-	sudo service docker restart
+    sudo usermod -aG docker $USER
+    sudo service docker restart
 
 install Node-RED from the gist above
 
