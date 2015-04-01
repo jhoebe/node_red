@@ -1,41 +1,40 @@
-install docker
+Install docker as per latest instructions at
 
-	sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring
-	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
-	sudo reboot
+	 https://docs.docker.com/installation/
 
-then
+e.g. for Ubuntu 14.04
 
-	sudo apt-get install lxc-docker
+        sudo apt-get update
+        sudo apt-get install linux-image-generic-lts-trusty wget
+	wget -qO- https://get.docker.com/ | sh
 
 add yourself to docker group  for when you get fed up with all the sudo below...
 
-	sudo groupadd docker
-	sudo gpasswd -a ${USER} docker
+	sudo usermod -aG docker $USER
 	sudo service docker restart
 
-install Node-RED from gist
+install Node-RED from the gist above
 
     sudo docker build -rm -t davecj/node-red http://gist.github.com/raw/9435867/Dockerfile
     or
     sudo docker build -rm -t davecj/node-red git://gist.github.com/9435867.git
 
-(or scp Dockerfile and build)
+(or copy / paste the Dockerfile and build)
 
-	sudo docker build -rm -t davecj/node-red - < Dockerfile
+    sudo docker build -rm -t davecj/node-red - < Dockerfile
 
 run (as daemon)
 
-	sudo docker run -d -p 1880:1880 davecj/node-red
+    sudo docker run -d -p 1880:1880 --name mynodered davecj/node-red
 
-command line
+start a command line inside the container
 
-	sudo docker run -i -t davecj/node-red /bin/bash
+    sudo docker run -it --rm -p 1880:1880 --name mynodered davecj/node-red /bin/bash
 
 show running containers
 
-	sudo docker ps -a
+    sudo docker ps -a
 
 show all images (so you can tidy up)
 
-	sudo docker images
+    sudo docker images
