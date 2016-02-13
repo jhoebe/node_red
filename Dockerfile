@@ -5,6 +5,8 @@ MAINTAINER ceejay
  
 # download latest stable node-red
 RUN npm install -g node-red
+RUN npm install node-red-contrib-hue 
+
 
 # use external storage for the user directory
 VOLUME /root/.node-red
